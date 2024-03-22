@@ -8,7 +8,7 @@
 Thumbs.db
 docker-compose.yml
 node_modules/
-
+dist/
 
 # WordPress specific
 wp-config.php
@@ -23,6 +23,10 @@ wp-content/cache/supercache/*
 wp-content/themes/site-web/build/*
 wp-content/plugins/hello.php
 wp-content/languages
+
+# Theme specific
+wp-content/themes/eval/style.css
+wp-content/themes/eval/style.css.map
 
 # wp core (as of 4.9.5)
 /db-config.php
