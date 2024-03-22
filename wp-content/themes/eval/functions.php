@@ -164,3 +164,27 @@ return count( $comments_by_type['comment'] );
 return $count;
 }
 }
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+function my_theme_scripts() {
+  wp_enqueue_script( 'jquery' );
+
+  $theme_version = wp_get_theme()->get('Version');
+  
+  wp_enqueue_script('my-theme-script', get_template_directory_uri() . '/dist/bundle.js', array(), $theme_version, true);
+  wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/node_modules/bootstrap/dist/js/bootstrap.min.js', array('jquery', 'popper-js'), $theme_version, true);
+}
+add_action('wp_enqueue_scripts', 'my_theme_scripts');
+
+function mytheme_enqueue_styles() {
+  $theme_version = wp_get_theme()->get('Version');
+
+  wp_enqueue_style('main-styles', get_stylesheet_uri(), array(), $theme_version);
+  wp_enqueue_style('global-css', get_template_directory_uri() . '/src/css/global.css', array(), $theme_version);
+  wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/node_modules/bootstrap/dist/css/bootstrap.min.css', array(), $theme_version);
+  wp_enqueue_style('material-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons', array(), null);
+}
+add_action('wp_enqueue_scripts', 'mytheme_enqueue_styles');
+
