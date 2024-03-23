@@ -1,3 +1,93 @@
+@font-face {
+  font-family: "Geist";
+  src:
+    url("../fonts/geist/Geist-Black.otf") format("opentype"),
+    url("../fonts/geist/Geist-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geist";
+  src:
+    url("../fonts/geist/Geist-Bold.otf") format("opentype"),
+    url("../fonts/geist/Geist-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geist";
+  src:
+    url("../fonts/geist/Geist-Light.otf") format("opentype"),
+    url("../fonts/geist/Geist-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geist";
+  src:
+    url("../fonts/geist/Geist-Medium.otf") format("opentype"),
+    url("../fonts/geist/Geist-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geist";
+  src:
+    url("../fonts/geist/Geist-Regular.otf") format("opentype"),
+    url("../fonts/geist/Geist-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geist";
+  src:
+    url("../fonts/geist/Geist-SemiBold.otf") format("opentype"),
+    url("../fonts/geist/Geist-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geist";
+  src:
+    url("../fonts/geist/Geist-Thin.otf") format("opentype"),
+    url("../fonts/geist/Geist-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geist";
+  src:
+    url("../fonts/geist/Geist-UltraBlack.otf") format("opentype"),
+    url("../fonts/geist/Geist-UltraBlack.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geist";
+  src:
+    url("../fonts/geist/Geist-UltraLight.otf") format("opentype"),
+    url("../fonts/geist/Geist-UltraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geist Variable";
+  src:
+    url("../fonts/geist/GeistVariableVF.ttf") format("truetype-variations"),
+    url("../fonts/geist/GeistVariableVF.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
 html,
 body,
 div,
@@ -284,4 +374,16 @@ section {
   clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
   white-space: nowrap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+li,
+p {
+  font-family: "Geist", sans-serif;
 }
