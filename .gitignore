@@ -9,6 +9,8 @@ Thumbs.db
 docker-compose.yml
 node_modules/
 dist/
+build/
+package-lock.json
 
 # WordPress specific
 wp-config.php
