@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "webpack --mode production && sass src/sass/style.scss:style.css",
     "build-css": "sass --watch src/sass/style.scss:style.css",
     "dev": "webpack --mode development --watch & sass --watch src/sass/style.scss:style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
