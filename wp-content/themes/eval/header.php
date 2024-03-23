@@ -11,7 +11,7 @@
   <?php wp_body_open(); ?>
   <div id="wrapper" class="hfeed">
     <header id="header" role="banner">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light ">
         <div class="container-fluid">
           <a class="navbar-brand" href="<?php echo home_url(); ?>">
             <span class="material-icons">
