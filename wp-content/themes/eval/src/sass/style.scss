@@ -24,6 +24,15 @@ BlankSlate is distributed under the terms of the GNU GPL
   .nav-link {
     color: #212529;
   }
+  .navbar-brand {
+    line-height: 0 !important;
+    span {
+      margin-bottom: 5px;
+    }
+  }
+  .ipapi-target {
+    font-weight: bold;
+  }
 }
 
 /* 
