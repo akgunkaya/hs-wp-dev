@@ -9,7 +9,6 @@ import {
 	PanelBody,
 	PanelRow,
 } from "@wordpress/components";
-import "./editor.scss";
 
 const GalleryDisplayEdit = ({ attributes, setAttributes }) => {
 	const blockProps = useBlockProps();

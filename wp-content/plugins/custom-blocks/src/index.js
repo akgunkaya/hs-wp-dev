@@ -10,6 +10,7 @@ import ProductDisplaySave from "./product-display-save";
 import GalleryDisplayEdit from "./gallery-display-edit";
 import GalleryDisplaySave from "./gallery-display-save";
 import "./style.scss";
+import "./editor.scss";
 
 registerBlockType("hero-banner-block/banner-block", {
 	apiVersion: 2,

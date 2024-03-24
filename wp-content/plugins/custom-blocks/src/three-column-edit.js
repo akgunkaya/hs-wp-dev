@@ -4,7 +4,6 @@ import {
 	MediaUploadCheck,
 } from "@wordpress/block-editor";
 import { TextControl } from "@wordpress/components";
-import "./editor.scss";
 
 const ThreeColumnEdit = (props) => {
 	const { attributes, setAttributes } = props;

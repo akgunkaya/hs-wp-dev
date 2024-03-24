@@ -12,16 +12,19 @@
 */
 .three-column-section {
 	background-color: #f4f4f4;
-	h2 {
-		font-size: 2.5rem;
-		font-weight: 700;
-	}
-	.column {
-		img {
-			max-width: 200px;
+	.container {
+		padding: 70px 0;
+		h2 {
+			font-size: 2.5rem;
+			font-weight: 700;
 		}
-		p {
-			color: #7a808c;
+		.column {
+			img {
+				max-width: 200px;
+			}
+			p {
+				color: #7a808c;
+			}
 		}
 	}
 }
@@ -30,13 +33,19 @@
 	Testimonials Section	
 */
 .custom-testimonial-section {
-	h2 {
-		font-size: 2.5rem;
-		font-weight: 700;
-	}
-	.testimonial {
-		p {
+	.container {
+		padding: 70px 0;
+		.lead {
 			color: #7a808c;
+		}
+		h2 {
+			font-size: 2.5rem;
+			font-weight: 700;
+		}
+		.testimonial {
+			p {
+				color: #7a808c;
+			}
 		}
 	}
 }

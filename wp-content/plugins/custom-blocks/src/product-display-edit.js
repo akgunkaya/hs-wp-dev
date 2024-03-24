@@ -11,7 +11,6 @@ import {
 	Button,
 } from "@wordpress/components";
 import { useState } from "@wordpress/element";
-import "./editor.scss";
 
 const ProductDisplayEdit = ({ attributes, setAttributes }) => {
 	const blockProps = useBlockProps();

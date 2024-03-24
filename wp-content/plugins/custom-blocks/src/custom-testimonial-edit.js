@@ -5,7 +5,6 @@ import {
 	URLInput,
 } from "@wordpress/block-editor";
 import { TextControl } from "@wordpress/components";
-import "./editor.scss";
 
 const CustomTestimonialEdit = ({ attributes, setAttributes }) => {
 	const testimonials = attributes.testimonials;
