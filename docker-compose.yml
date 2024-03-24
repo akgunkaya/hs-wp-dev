@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 services:
   # Database
@@ -56,6 +56,18 @@ services:
     volumes:
       - ./:/var/www/html
       - db_data:/var/lib/mysql
+    networks:
+      - wpsite
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+    depends_on:
+      - db
     networks:
       - wpsite
 
