@@ -28,7 +28,7 @@ const CustomTestimonialEdit = ({ attributes, setAttributes }) => {
 	return (
 		<div {...blockProps}>
 			<div className="editor-block-container">
-				<h3>Hero Banner Section</h3>
+				<h3>Custom Testimonial Section</h3>
 				<div>
 					<TextControl
 						label="Title"
