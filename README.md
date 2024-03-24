@@ -7,6 +7,7 @@
 5. Run `npm install`
 6. Run `npm run build` this will build the necessary js and css files, this will also run npm install and build in the custom blocks plugin folder
 7. Visit `http://localhost` in your browser to access the WordPress site
+8. u: admin p: password to access the admin dashboard
 
 ### Design decisions
 
