@@ -7,6 +7,8 @@ import CustomTestimonialEdit from "./custom-testimonial-edit";
 import CustomTestimonialSave from "./custom-testimonial-save";
 import ProductDisplayEdit from "./product-display-edit";
 import ProductDisplaySave from "./product-display-save";
+import GalleryDisplayEdit from "./gallery-display-edit";
+import GalleryDisplaySave from "./gallery-display-save";
 import "./style.scss";
 
 registerBlockType("hero-banner-block/banner-block", {
@@ -154,4 +156,38 @@ registerBlockType("product-display-block/product-block", {
 	},
 	edit: ProductDisplayEdit,
 	save: ProductDisplaySave,
+});
+
+registerBlockType("gallery-display-block/gallery-block", {
+	apiVersion: 2,
+	title: "Gallery Display Block",
+	icon: "format-gallery",
+	category: "layout",
+	attributes: {
+		galleryTitle: {
+			type: "string",
+			default: "Gallery Title",
+		},
+		images: {
+			type: "array",
+			default: [],
+			items: {
+				type: "object",
+				properties: {
+					url: {
+						type: "string",
+					},
+					alt: {
+						type: "string",
+						default: "Gallery image",
+					},
+					caption: {
+						type: "string",
+					},
+				},
+			},
+		},
+	},
+	edit: GalleryDisplayEdit,
+	save: GalleryDisplaySave,
 });

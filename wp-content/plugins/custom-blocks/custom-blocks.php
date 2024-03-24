@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Plugin Name:       Custom Blocks
  * Description:       Example block scaffolded with Create Block tool.
@@ -13,7 +14,7 @@
  * @package           create-block
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
 	exit; // Exit if accessed directly.
 }
 
@@ -24,7 +25,23 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
-function custom_blocks_custom_blocks_block_init() {
-	register_block_type( __DIR__ . '/build' );
+function custom_blocks_custom_blocks_block_init()
+{
+	register_block_type(__DIR__ . '/build');
 }
-add_action( 'init', 'custom_blocks_custom_blocks_block_init' );
+add_action('init', 'custom_blocks_custom_blocks_block_init');
+
+
+function my_custom_block_enqueue_frontend_script()
+{
+	if (has_block('gallery-display-block/gallery-block')) {
+		wp_enqueue_script(
+			'my-custom-block-frontend-script',
+			plugins_url('gallery.js', __FILE__),
+			array(),
+			'1.0',
+			true
+		);
+	}
+}
+add_action('wp_enqueue_scripts', 'my_custom_block_enqueue_frontend_script');
