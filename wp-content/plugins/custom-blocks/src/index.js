@@ -3,6 +3,8 @@ import ThreeColumnEdit from "./three-column-edit";
 import ThreeColumnSave from "./three-column-save";
 import HeroBannerEdit from "./hero-banner-edit";
 import HeroBannerSave from "./hero-banner-save";
+import CustomTestimonialEdit from "./custom-testimonial-edit";
+import CustomTestimonialSave from "./custom-testimonial-save";
 import "./style.scss";
 
 registerBlockType("hero-banner-block/banner-block", {
@@ -69,4 +71,43 @@ registerBlockType("your-theme/three-column-section", {
 	},
 	edit: ThreeColumnEdit,
 	save: ThreeColumnSave,
+});
+
+registerBlockType("custom-testimonial-block/testimonial-block", {
+	apiVersion: 2,
+	title: "Custom Testimonial Block",
+	icon: "format-quote",
+	category: "layout",
+	attributes: {
+		title: {
+			type: "string",
+			default: "Default Title",
+		},
+		subtitle: {
+			type: "string",
+			default: "Default Subtitle",
+		},
+		imageUrl: {
+			type: "string",
+			default: null,
+		},
+		testimonials: {
+			type: "array",
+			default: [
+				{ name: "John Doe", text: "This is a testimonial." },
+				{ name: "Jane Doe", text: "This is another testimonial." },
+				{ name: "Steve Smith", text: "Yet another testimonial." },
+				{ name: "Sara Johnson", text: "Great service!" },
+			],
+			items: {
+				type: "object",
+				properties: {
+					name: { type: "string" },
+					text: { type: "string" },
+				},
+			},
+		},
+	},
+	edit: CustomTestimonialEdit,
+	save: CustomTestimonialSave,
 });

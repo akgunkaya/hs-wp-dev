@@ -1,4 +1,6 @@
-// Three Column Section
+/*
+	Three Column Section
+*/
 .three-column-section {
 	background-color: #f4f4f4;
 	h2 {
@@ -9,6 +11,21 @@
 		img {
 			max-width: 200px;
 		}
+		p {
+			color: #7a808c;
+		}
+	}
+}
+
+/*
+	Testimonials Section	
+*/
+.custom-testimonial-section {
+	h2 {
+		font-size: 2.5rem;
+		font-weight: 700;
+	}
+	.testimonial {
 		p {
 			color: #7a808c;
 		}

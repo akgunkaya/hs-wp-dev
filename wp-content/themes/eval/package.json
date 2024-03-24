@@ -4,10 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production && sass src/sass/style.scss:style.css",
+    "start-custom-blocks": "cd ../../plugins/custom-blocks && npm start",
+    "build-custom-blocks": "cd ../../plugins/custom-blocks && npm run build",
+    "build": "webpack --mode production && sass src/sass/style.scss:style.css && npm run build-custom-blocks",
     "build-css": "sass --watch src/sass/style.scss:style.css",
     "dev": "webpack --mode development --watch & sass --watch src/sass/style.scss:style.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run dev & npm run start-custom-blocks"
   },
   "keywords": [],
   "author": "",

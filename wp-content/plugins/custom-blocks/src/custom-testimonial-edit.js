@@ -7,11 +7,22 @@ import {
 import { TextControl } from "@wordpress/components";
 import "./editor.scss";
 
-const HeroBannerEdit = ({ attributes, setAttributes }) => {
+const CustomTestimonialEdit = ({ attributes, setAttributes }) => {
+	const testimonials = attributes.testimonials;
 	const blockProps = useBlockProps();
 
 	const onSelectImage = (media) => {
 		setAttributes({ imageUrl: media.url });
+	};
+
+	const updateTestimonial = (index, field, value) => {
+		const updatedTestimonials = testimonials.map((testimonial, i) => {
+			if (i === index) {
+				return { ...testimonial, [field]: value };
+			}
+			return testimonial;
+		});
+		setAttributes({ testimonials: updatedTestimonials });
 	};
 
 	return (
@@ -46,22 +57,23 @@ const HeroBannerEdit = ({ attributes, setAttributes }) => {
 
 				{attributes.imageUrl && <img width={100} src={attributes.imageUrl} />}
 
-				<div>
-					<TextControl
-						label="CTA Button Text"
-						value={attributes.ctaButtonText}
-						onChange={(newText) => setAttributes({ ctaButtonText: newText })}
-					/>
-				</div>
-
-				<URLInput
-					label="CTA Button Link"
-					value={attributes.ctaButtonLink}
-					onChange={(newLink) => setAttributes({ ctaButtonLink: newLink })}
-				/>
+				{testimonials.map((testimonial, index) => (
+					<div key={index}>
+						<TextControl
+							label="Name"
+							value={testimonial.name}
+							onChange={(newName) => updateTestimonial(index, "name", newName)}
+						/>
+						<TextControl
+							label="Testimonial"
+							value={testimonial.text}
+							onChange={(newText) => updateTestimonial(index, "text", newText)}
+						/>
+					</div>
+				))}
 			</div>
 		</div>
 	);
 };
 
-export default HeroBannerEdit;
+export default CustomTestimonialEdit;
