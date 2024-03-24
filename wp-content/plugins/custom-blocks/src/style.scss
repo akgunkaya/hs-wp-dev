@@ -1,4 +1,13 @@
 /*
+	Global
+*/
+.badge.pill-badge {
+	background-color: #f4f4f4;
+	color: #212529;
+	border-radius: 10px;
+}
+
+/*
 	Three Column Section
 */
 .three-column-section {
@@ -21,11 +30,6 @@
 	Testimonials Section	
 */
 .custom-testimonial-section {
-	.testimonial-badge {
-		background-color: #f4f4f4;
-		color: #212529;
-		border-radius: 10px;
-	}
 	h2 {
 		font-size: 2.5rem;
 		font-weight: 700;
@@ -33,6 +37,27 @@
 	.testimonial {
 		p {
 			color: #7a808c;
+		}
+	}
+}
+
+/*
+	Product Display Section
+*/
+.product-display-section {
+	.product-description {
+		color: #7a808c;
+	}
+	.bullet-points {
+		.list-container {
+			gap: 5px;
+		}
+	}
+	.price-container {
+		gap: 10px;
+		.price {
+			font-size: 2rem;
+			font-weight: bold;
 		}
 	}
 }

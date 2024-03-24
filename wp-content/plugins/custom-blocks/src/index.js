@@ -5,6 +5,8 @@ import HeroBannerEdit from "./hero-banner-edit";
 import HeroBannerSave from "./hero-banner-save";
 import CustomTestimonialEdit from "./custom-testimonial-edit";
 import CustomTestimonialSave from "./custom-testimonial-save";
+import ProductDisplayEdit from "./product-display-edit";
+import ProductDisplaySave from "./product-display-save";
 import "./style.scss";
 
 registerBlockType("hero-banner-block/banner-block", {
@@ -110,4 +112,46 @@ registerBlockType("custom-testimonial-block/testimonial-block", {
 	},
 	edit: CustomTestimonialEdit,
 	save: CustomTestimonialSave,
+});
+
+registerBlockType("product-display-block/product-block", {
+	apiVersion: 2,
+	title: "Product Display Block",
+	icon: "cart",
+	category: "layout",
+	attributes: {
+		badgeText: {
+			type: "string",
+			default: "New",
+		},
+		productName: {
+			type: "string",
+			default: "Product Name",
+		},
+		productDescription: {
+			type: "string",
+			default: "Description of the product",
+		},
+		bulletPoints: {
+			type: "array",
+			default: ["Feature 1", "Feature 2", "Feature 3"],
+			items: {
+				type: "string",
+			},
+		},
+		imageUrl: {
+			type: "string",
+			default: null,
+		},
+		price: {
+			type: "number",
+			default: 0,
+		},
+		ctaText: {
+			type: "string",
+			default: "Buy Now",
+		},
+	},
+	edit: ProductDisplayEdit,
+	save: ProductDisplaySave,
 });

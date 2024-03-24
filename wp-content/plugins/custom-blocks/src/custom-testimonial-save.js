@@ -4,9 +4,7 @@ const CustomTestimonialSave = ({ attributes }) => {
 			<div className="custom-testimonial-section">
 				<div className="container col-xxl-6 px-4 py-5">
 					<div className="text-center">
-						<span class="badge rounded-pill testimonial-badge">
-							Testimonial
-						</span>
+						<span class="badge rounded-pill pill-badge">Testimonial</span>
 						<h2>{attributes.title}</h2>
 						<p className="lead">{attributes.subtitle}</p>
 					</div>

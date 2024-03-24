@@ -14,7 +14,7 @@
       <nav class="navbar navbar-expand-lg navbar-light ">
         <div class="container-fluid">
           <a class="navbar-brand" href="<?php echo home_url(); ?>">
-            <span class="material-icons">
+            <span class="material-symbols-outlined">
               home
             </span>
           </a>
